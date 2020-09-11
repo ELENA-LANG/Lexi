@@ -26,7 +26,7 @@ public sealed class Win32WindowHandle : Win32Handle
                             SDIWindowClass, 
                             "Lexi"w, 
                             WS_OVERLAPPEDWINDOW || WS_VISIBLE,
-                            0, 0, 50, 50,
+                            20, 20, 300, 200,
                             WindowHandle.Default, 
                             CurrentInstance,
                             new Win32WindowListener(/*self*/))        

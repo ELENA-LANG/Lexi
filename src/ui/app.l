@@ -9,5 +9,5 @@ public class MainWindow : interface<Window>
     }
     
     // extending a Window with WindowImp.Handle
-    dispatch() => (imp.Handle); 
+    dispatch() => imp.Handle; 
 }
