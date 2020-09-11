@@ -1,0 +1,25 @@
+<configuration>
+    <project>
+        <executable>lexi.exe</executable>
+        <arguments></arguments>
+        <output></output>
+        <options></options>
+        <namespace>lexi</namespace>
+        <template>gui</template>
+        <debuginfo>-1</debuginfo>
+    </project>
+    <files>
+        <module>
+            <include>ui\app.l</include>
+            <include>interfaces\windowsystem.l</include>
+            <include>interfaces\windowimp.l</include>
+            <include>interfaces\window.l</include>
+            <include>win32\winFactory.l</include>
+            <include>win32\winimpl.l</include>
+            <include>win32\winhandlers.l</include>
+        </module>
+    </files>
+    <forwards>
+        <forward key="windowSystemFactory">lexi'Win32SystemFactory</forward>
+    </forwards>
+</configuration>
