@@ -1,7 +1,12 @@
-public sealed class Win32Impl : Win32WindowHandle, interface<WindowImp>
+public sealed class Win32Impl : interface<WindowImp>
 {
+    Win32Handle handle;
+    
+    Handle
+        = handle;
+    
     constructor()
     {
-        self.create();
+        handle := new Win32WindowHandle();
     }
 }

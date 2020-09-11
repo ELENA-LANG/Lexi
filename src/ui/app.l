@@ -8,6 +8,6 @@ public class MainWindow : interface<Window>
         imp := forward windowSystemFactory.createWindowImpl();
     }
     
-    // extending a Window with WindowImp
-    dispatch() => imp; 
+    // extending a Window with WindowImp.Handle
+    dispatch() => (imp.Handle); 
 }

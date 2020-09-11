@@ -12,14 +12,19 @@ class Win32WindowListener : SDIWindowCallback
     
 }
 
-public class Win32WindowHandle : Win32Handle
+public sealed class Win32WindowHandle : Win32Handle
 {
+    open()
+    {
+        self.create()
+    }
+    
     create()
     {
         handle := new WindowHandle(
                             EX_SDI_OVERLAPPEDWINDOW,
                             SDIWindowClass, 
-                            "Lexi", 
+                            "Lexi"w, 
                             WS_OVERLAPPEDWINDOW || WS_VISIBLE,
                             0, 0, 50, 50,
                             WindowHandle.Default, 
