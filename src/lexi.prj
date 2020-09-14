@@ -1,8 +1,8 @@
 <configuration>
     <project>
-        <executable>lexi.exe</executable>
+        <executable>..\bin\lexi.exe</executable>
         <arguments></arguments>
-        <output></output>
+        <output>..\bin</output>
         <options></options>
         <namespace>lexi</namespace>
         <template>gui</template>
@@ -17,6 +17,7 @@
             <include>win32\winFactory.l</include>
             <include>win32\winimpl.l</include>
             <include>win32\winhandlers.l</include>
+            <include>model\glyph.l</include>
         </module>
     </files>
     <forwards>

@@ -1,13 +1,14 @@
 public class MainWindow : interface<Window>
 {
     WindowImp imp;
+    Glyph     root;
     
-    // the program start
+    [info:"the program start"]
     constructor new()
     {
         imp := forward windowSystemFactory.createWindowImpl();
     }
     
-    // extending a Window with WindowImp.Handle
+    [info:"extending a Window with WindowImp.Handle"]
     dispatch() => imp.Handle; 
 }
