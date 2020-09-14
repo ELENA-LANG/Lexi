@@ -10,13 +10,13 @@
     </project>
     <files>
         <module>
+            <include>factories\windowsystem.l</include>
             <include>ui\app.l</include>
-            <include>interfaces\windowsystem.l</include>
-            <include>interfaces\windowimp.l</include>
-            <include>interfaces\window.l</include>
-            <include>win32\winFactory.l</include>
-            <include>win32\winimpl.l</include>
-            <include>win32\winhandlers.l</include>
+            <include>ui\windowimp.l</include>
+            <include>ui\window.l</include>
+            <include>factories\win32\winFactory.l</include>
+            <include>ui\win32\winimpl.l</include>
+            <include>ui\win32\winhandlers.l</include>
             <include>model\glyph.l</include>
         </module>
     </files>
