@@ -20,6 +20,9 @@
             <include>model\glyph.l</include>
             <include>factories\gui.l</include>
             <include>factories\pm.l</include>
+            <include>model\composition.l</include>
+            <include>view\compositor.l</include>
+            <include>view\simplecompositor.l</include>
         </module>
     </files>
     <forwards>
