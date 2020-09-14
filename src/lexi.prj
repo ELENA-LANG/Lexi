@@ -18,6 +18,8 @@
             <include>ui\win32\winimpl.l</include>
             <include>ui\win32\winhandlers.l</include>
             <include>model\glyph.l</include>
+            <include>factories\gui.l</include>
+            <include>factories\pm.l</include>
         </module>
     </files>
     <forwards>
