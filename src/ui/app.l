@@ -7,6 +7,8 @@ public class MainWindow : interface<Window>
     constructor new()
     {
         imp := forward windowSystemFactory.createWindowImpl();
+        
+        root := forward guiFactory.createCharacter();
     }
     
     [info:"extending a Window with WindowImp.Handle"]

@@ -10,22 +10,24 @@
     </project>
     <files>
         <module>
+            <include>factories\win32\winFactory.l</include>
             <include>factories\windowsystem.l</include>
+            <include>factories\gui.l</include>
+            <include>factories\pm.l</include>
+            <include>ui\win32\winimpl.l</include>
+            <include>ui\win32\winhandlers.l</include>
             <include>ui\app.l</include>
             <include>ui\windowimp.l</include>
             <include>ui\window.l</include>
-            <include>factories\win32\winFactory.l</include>
-            <include>ui\win32\winimpl.l</include>
-            <include>ui\win32\winhandlers.l</include>
             <include>model\glyph.l</include>
-            <include>factories\gui.l</include>
-            <include>factories\pm.l</include>
             <include>model\composition.l</include>
             <include>view\compositor.l</include>
             <include>view\simplecompositor.l</include>
+            <include>model\char.l</include>
         </module>
     </files>
     <forwards>
         <forward key="windowSystemFactory">lexi'Win32SystemFactory</forward>
+        <forward key="guiFactory">lexi'PMFactory</forward>
     </forwards>
 </configuration>
