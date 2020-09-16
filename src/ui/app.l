@@ -1,14 +1,23 @@
-public class MainWindow : interface<Window>
+public sealed class MainWindow : Object, interface<Window>
 {
-    WindowImp imp;
-    Glyph     root;
+    WindowImp  imp;
+    Glyph      glyph;
     
     [info:"the program start"]
     constructor new()
     {
         imp := forward windowSystemFactory.createWindowImpl();
         
-        root := forward guiFactory.createCharacter();
+        imp.OnRedraw := { self.redraw() };
+        
+        glyph := new SimpleComposition/*SimpleCompositor*//*Composition<SimpleCompositor>*/();
+        
+        glyph.insert(new Character($65));
+    }
+    
+    redraw()
+    {
+        glyph.draw(self)
     }
     
     [info:"extending a Window with WindowImp.Handle"]

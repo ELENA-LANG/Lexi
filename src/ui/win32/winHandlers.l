@@ -9,14 +9,31 @@ public class Win32Handle
 
 class Win32WindowListener : SDIWindowCallback
 {
+    Win32WindowHandle owner;
     
+    constructor(Win32WindowHandle owner)
+    {
+        this owner := owner
+    }
+    
+    wm_paint(WindowHandle hwnd, IntNumber message, ref IntNumber retVal)
+    {
+        owner.repaint()
+    }
 }
 
 public sealed class Win32WindowHandle : Win32Handle
 {
+    event Func OnPaint;
+    
     open()
     {
         self.create()
+    }
+    
+    repaint()
+    {
+        OnPaint.?()
     }
     
     create()
@@ -29,6 +46,6 @@ public sealed class Win32WindowHandle : Win32Handle
                             20, 20, 300, 200,
                             WindowHandle.Default, 
                             CurrentInstance,
-                            new Win32WindowListener(/*self*/))        
+                            new Win32WindowListener(self))        
     }
 }

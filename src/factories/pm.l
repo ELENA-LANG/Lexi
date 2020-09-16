@@ -1,5 +1,4 @@
-public class PMFactory : GUIFactory
+public singleton PMFactory : GUIFactory
 {
-    Glyph createCharacter()
-        = new Character();
 }
+

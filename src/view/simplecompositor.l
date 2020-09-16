@@ -1,3 +1,14 @@
-public class SimpleCompositor : interface<Compositor>
+public class SimpleCompositor : Compositor
 {
+    Composition composition;
+    
+    setComposition(Composition composition) 
+    {
+        this composition := composition
+    }
+    
+    compose() 
+    {
+        
+    }
 }

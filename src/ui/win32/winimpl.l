@@ -1,6 +1,11 @@
-public sealed class Win32Impl : interface<WindowImp>
+public sealed class Win32Impl : Object, interface<WindowImp>
 {
-    Win32Handle handle;
+    Win32WindowHandle handle;
+    
+    set Func OnRedraw(Func f)
+    {
+        handle.OnPaint := f
+    }
     
     Handle
         = handle;

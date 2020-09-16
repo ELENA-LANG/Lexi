@@ -1,4 +1,4 @@
 public interface GUIFactory
 {
-    abstract Glyph createCharacter() {}
+    //abstract Glyph createCharacter() {}
 }

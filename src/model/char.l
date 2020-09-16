@@ -1,4 +1,13 @@
-public sealed Character : interface<Glyph>
+public sealed Character : LeafGlyph
 {
-    draw() {}
+    char ch;
+    
+    constructor(char ch)
+    {
+        this ch := ch
+    }
+    
+    draw(Window w) 
+    {
+    }
 }
