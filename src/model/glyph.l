@@ -1,6 +1,9 @@
 public interface Glyph
 {
-    abstract draw(Window w) {}
+    abstract draw(Window w);
     
-    abstract insert(Glyph g) {}
+    draw(o)
+        <= draw(cast Window(o));
+    
+    abstract insert(Glyph g);
 }

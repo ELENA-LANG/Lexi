@@ -1,6 +1,6 @@
 public interface Compositor
 {
-    abstract compose() {}
+    abstract compose();
     
-    abstract setComposition(Composition composition) {}
+    abstract setComposition(Composition composition);
 }

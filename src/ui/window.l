@@ -1,4 +1,4 @@
 public interface Window
 {
-    abstract redraw() {}
+    abstract redraw();
 }
