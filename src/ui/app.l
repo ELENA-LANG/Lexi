@@ -10,7 +10,7 @@ public sealed class MainWindow : Object, interface<Window>
         
         imp.OnRedraw := { self.redraw() };
         
-        glyph := new SimpleComposition/*SimpleCompositor*//*Composition<SimpleCompositor>*/();
+        glyph := new Composition<SimpleCompositor>();
         
         glyph.insert(new Character($65));
     }

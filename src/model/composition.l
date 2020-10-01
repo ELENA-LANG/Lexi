@@ -12,14 +12,12 @@ public class Composition : Row
     }    
 }
 
-public class SimpleComposition/*<T>*/ : Composition
+public class Composition<T> : Composition
 {
     constructor()
     {
-        this compositor := new /*T*/SimpleCompositor();
+        this compositor := new T();
         compositor.setComposition(self);
-        
-        children := new List<Glyph>(); // !! temporal
     }
         
 }
