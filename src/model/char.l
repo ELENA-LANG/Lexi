@@ -9,5 +9,6 @@ public sealed Character : LeafGlyph
     
     draw(Window w) 
     {
+        w.drawText()
     }
 }
