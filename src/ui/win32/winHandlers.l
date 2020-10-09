@@ -1,4 +1,5 @@
 import system'winforms;
+import system'drawing;
 
 public class Win32Handle
 {
@@ -24,7 +25,14 @@ class Win32WindowListener : SDIWindowCallback
 
 public sealed class Win32WindowHandle : Win32Handle
 {
+    Canvas  canvas;
+    
     event Func OnPaint;
+    
+    constructor()
+    {
+        canvas := new Canvas()
+    }
     
     open()
     {
@@ -33,7 +41,20 @@ public sealed class Win32WindowHandle : Win32Handle
     
     repaint()
     {
-        OnPaint.?()
+        auto struct := new PAINTSTRUCT();
+        struct.begin(handle);
+        HDC dc := struct.HDC;
+         
+        canvas.open(dc);
+        OnPaint.?();
+        canvas.close();
+
+        struct.end(handle)
+    }
+    
+    writeText()
+    {
+        canvas.writeText("CCC", 10, 10)
     }
     
     create()

@@ -17,5 +17,6 @@ public sealed class Win32Impl : Object, interface<WindowImp>
     
     deviceDrawText()
     {
+        handle.writeText()
     }
 }
