@@ -6,6 +6,6 @@ public interface WindowImp
     [info:"Returns the real window handle"]
     get abstract Handle();
     
-    [info:"Draws a text"]
-    abstract deviceDrawText();
+    [info:"Draws a character"]
+    abstract deviceDrawChar(char ch);
 }

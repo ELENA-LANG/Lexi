@@ -20,9 +20,9 @@ public sealed class MainWindow : Object, interface<Window>
         glyph.draw(self)
     }
     
-    drawText()
+    drawChar(char ch)
     {
-        imp.deviceDrawText()
+        imp.deviceDrawChar(ch)
     }
     
     [info:"extending a Window with WindowImp.Handle"]
