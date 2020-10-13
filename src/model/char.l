@@ -7,8 +7,14 @@ public sealed Character : LeafGlyph
         this ch := ch
     }
     
-    draw(Window w) 
+    draw(Window w, int x, int y) 
     {
-        w.drawChar(ch)
+        w.drawChar(ch, x, y)
+    }
+    
+    bound(ref int width, ref int height)
+    {
+        width := 10;
+        height := 10
     }
 }

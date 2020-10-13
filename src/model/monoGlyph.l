@@ -18,6 +18,11 @@ public class MonoGlyph : Glyph
         }
     }
     
-    draw(Window w)
+    draw(Window w, int x, int y)
         => component;
+        
+    bound(ref int width, ref int height)
+    {
+        component.bound(ref width, ref height)
+    }        
 }

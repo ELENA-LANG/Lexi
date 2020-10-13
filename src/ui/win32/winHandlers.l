@@ -52,9 +52,9 @@ public sealed class Win32WindowHandle : Win32Handle
         struct.end(handle)
     }
     
-    writeChar(char ch)
+    writeChar(char ch, int x, int y)
     {
-        canvas.writeText(cast wide(ch), 10, 10)
+        canvas.writeText(cast wide(ch), x, y)
     }
     
     create()

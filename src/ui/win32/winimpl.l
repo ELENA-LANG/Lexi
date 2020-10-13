@@ -15,8 +15,8 @@ public sealed class Win32Impl : Object, interface<WindowImp>
         handle := new Win32WindowHandle();
     }
     
-    deviceDrawChar(char ch)
+    deviceDrawChar(char ch, int x, int y)
     {
-        handle.writeChar(ch)
+        handle.writeChar(ch, x, y)
     }
 }

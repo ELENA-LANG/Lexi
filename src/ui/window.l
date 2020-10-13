@@ -2,5 +2,5 @@ public interface Window
 {
     abstract redraw();
     
-    abstract drawChar(ch);
+    abstract drawChar(char ch, int x, int y);
 }

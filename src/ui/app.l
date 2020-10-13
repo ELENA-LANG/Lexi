@@ -17,12 +17,12 @@ public sealed class MainWindow : Object, interface<Window>
     
     redraw()
     {
-        glyph.draw(self)
+        glyph.draw(self, 10, 10)
     }
     
-    drawChar(char ch)
+    drawChar(char ch, int x, int y)
     {
-        imp.deviceDrawChar(ch)
+        imp.deviceDrawChar(ch, x, y)
     }
     
     [info:"extending a Window with WindowImp.Handle"]

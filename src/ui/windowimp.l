@@ -7,5 +7,5 @@ public interface WindowImp
     get abstract Handle();
     
     [info:"Draws a character"]
-    abstract deviceDrawChar(char ch);
+    abstract deviceDrawChar(char ch, int x, int y);
 }
