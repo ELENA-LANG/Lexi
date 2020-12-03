@@ -1,4 +1,4 @@
-public sealed class MainWindow : Object, interface<Window>
+public sealed class MainWindow : /*Object, */interface<Window>
 {
     WindowImp  imp;
     Glyph      glyph;
@@ -13,6 +13,8 @@ public sealed class MainWindow : Object, interface<Window>
         glyph := new Composition<SimpleCompositor>();
         
         glyph.insert(new Character($65));
+        glyph.insert(new Character($66));
+        glyph.insert(new Character($67));
     }
     
     redraw()
